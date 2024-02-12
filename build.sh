@@ -5,7 +5,7 @@ FILES=`ls $TEMPLATES_FOLDER`
 
 for FILE in $FILES
 do
-    if git diff --quiet main -- $TEMPLATES_FOLDER/$FILE; then
+    if git diff --quiet origin/main -- $TEMPLATES_FOLDER/$FILE; then
         echo "No differences found in $FILE"
     else
         echo "Differences found in $FILE"
